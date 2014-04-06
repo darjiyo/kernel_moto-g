@@ -206,7 +206,6 @@ static ssize_t regmap_map_read_file(struct file *file, char __user *user_buf,
 		if (p >= *ppos) {
 			/* ...but not beyond it */
 			if (buf_pos + map->debugfs_tot_len > count)
-			if (buf_pos + 1 + tot_len >= count)
 				break;
 
 			/* Format the register */
